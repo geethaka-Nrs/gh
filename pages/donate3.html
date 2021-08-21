@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation page</title>
+   
+    <link href="donate3.css" rel="stylesheet">
+	<link rel="stylesheet" href="nav.css">
+    
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!--fontawesome-->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+    <!--This is used for search icon. Instead putting icon manually it is loaded from fontawesome-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- navbar -->
+
+    <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
+
+        <a class="navbar-brand"><img src="logo.PNG" height="50px"></a>
+
+        <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="nav">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">HOME</a>
+
+                </li>
+
+                <li class="nav-item dropdown" data-toggle="dropdown">
+
+                    <a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="#">Find Pets</a>
+
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">Dog</a>
+
+                        <a class="dropdown-item" href="#">Cat</a>
+
+                        <a class="dropdown-item" href="#">Parrot</a>
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">Get Involved</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">Adoption Info</a>
+
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">Pet care & Health</a>
+
+                </li>
+
+            </ul>
+
+            <button type="button" class="btn btn-outline-primary">Log In/Sign In</button>
+            <!-- Search bar -->
+
+
+            <!-- <form class="form-inline ml-3">
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control " placeholder="Search">
+
+                    <button type="submit"><i class="fa fa-search"></i></button>
+
+                </div>
+
+            </form> -->
+
+        </div>
+
+
+    </nav>
+    <div class="wrappe">
+        <div class="header fl">
+            <div class="sub-header">
+                    <div class="logo fl">
+                        
+</div>
+
+<!--------end top header-->
+            </div>
+<!----end sub header-->
+            <div class="bttm">
+                <div class="btn-head fl">
+                    <h1  style="font-size:400%;">You can be the hero <span style="color:#0D0099;">they need</span></h1>
+<h5  style="text-align:left;font-size:110%;">For every animal saved, countless others are still suffering.
+
+By stepping up for them, you can create a future where animals no longer have to suffer in puppy mills, factory farms, testing labs or other heartbreaking situations.
+
+Will you be a hero for all animals? Start saving lives today by making a tax-deductible one-time gift—or fight for all animals all year long with a monthly contribution. </h5>
+ <p style="text-align:left;font-size:110%;color:#000000;"><b>If you don't have a donate account.You can <em><a href="wwww">register</a></em> here.</b></p>
+ <div class="inner-form">
+            <div class="form-group">
+              <label for="donate-amount"style="font-size:200%;color:#0D0099;text-align:left;">Select or enter an amount:</label>
+              <div class="donation-buttons-wrapper" data-defaults="[25, 50, 75, 100]" data-currency="$">
+                    <div class="btn-wrap">
+                      <input class="btn btn-default donate-btn-group" type="button" value="$25" data-amount="25" >
+                    </div>
+                    <div class="btn-wrap">
+                      <input class="btn btn-default donate-btn-group active" type="button" value="$50" data-amount="50">
+                    </div>
+                   
+				</div>	
+
+              </div>
+            </div>
+
+            <div class="input-prepend">
+              <input name="amount" type="text" id="donate-amount" value="">
+              <span class="add-on">$</span>
+              
+            </div>
+          </div>			
+
+<div class="bcom fl">
+<p><a href="file:///C:/Users/hi/Desktop/pet%20adoption/payment.html">Make Donation</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

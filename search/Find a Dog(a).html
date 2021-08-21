@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+
+}
+
+.field{
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px; 
+  height: 600px;
+}
+
+select{
+  margin-right: 10px;
+  background: #2b262a;
+  color:#fff;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+   
+.by{
+    font-size: 20px;
+    font-style:inherit;
+  
+}
+
+.first{
+  margin-top: -10px;
+}
+
+
+
+.district{
+  float: left;
+  font-size: 20px;
+  }
+  
+.province{
+  padding-right: 100px;
+  font-size: 20px;
+  }
+  
+.searchbtn {
+  border-radius: 12px;
+  background-color:#000080;
+  color: white;
+  padding: 5px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+  
+  font-size: 20px;
+}
+
+.searchbtn:hover {
+  opacity: 1;
+}
+
+.resetbtn {
+  border-radius: 12px;
+  background-color: #000080;
+  color: white;
+  padding: 5px 5px ;
+  margin: 8px 10px 10px 60px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+ 
+  font-size: 20px;
+}
+
+.resetbtn:hover {
+  opacity: 1;
+}
+
+
+
+#Home {background-color: #11324D;}
+#News {background-color: #11324D;}
+#Contact {background-color: #11324D;}
+#About {background-color: #11324D;}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="field">
+<button class="tablink" onclick="openPage('Home', this, '#11324D')" id="defaultOpen">Find a Dog</button>
+<button class="tablink" onclick="openPage('News', this, '#11324D')" >Find a Cat</button>
+<button class="tablink" onclick="openPage('Contact', this, '#11324D')">Find a Bird</button>
+<button class="tablink" onclick="openPage('About', this, '#11324D')">Find other Pet</button>
+
+<div id="Home" class="tabcontent">
+  <div class="first">
+    <form action="/action_page.php" >
+     <fieldset style='width:720px; height:450px;  background-image: url("Dog9.jpg");'>
+     <div class="by">
+      <option> <h1>By Districts/ Province: </h1></option>
+      </div>
+      <br>
+      <div class="district">
+       <label for="district">District</label><br><br>
+      <select name="district" id="district">
+        <option value="ampara">Ampara</option>
+        <option value="anuradhapura">Anuradhapura</option>
+        <option value="badulla">Badulla</option>
+        <option value="batticaloa">Batticaloa</option>
+        <option value="colombo">Colombo</option>
+        <option value="galle">Galle</option>
+        <option value="gampaha">Gampaha</option>
+        <option value="hambantota">Hambantota</option>
+        <option value="jaffna">Jaffna</option>
+        <option value="Kaluthara">Kaluthara</option>
+        <option value="kandy">Kandy</option>
+        <option value="kegalle">Kegalle</option>
+        <option value="killinochchi">Killinochchi</option>
+        <option value="kurunegala">Kurunegala</option>
+        <option value="mannar">Mannar</option>
+        <option value="matale">Matale</option>
+        <option value="matara">Matara</option>
+        <option value="monaragala">Monaragala</option>
+        <option value="mullaitivu">Mullaitivu</option>
+        <option value="nuwara eliya">Nuwara Eliya</option>
+        <option value="polonnaruwa">Plonnaruwa</option>
+        <option value="puttalam">Puttalam</option>
+        <option value="rathnapura">Rathnapura</option>
+        <option value="trincomalee">Trincomalee</option>
+        <option value="vavuniya">Vavuniya</option>
+       </select><br>
+     </div>
+     
+       <div class="province">
+        <label for="province">Province</label><br><br>
+      <select name="province" id="province">
+        <option value="central">Central</option>
+        <option value="eastern">Eastern</option>
+        <option value="northern">Northern</option>
+        <option value="southern">Southern</option>
+        <option value="western">Western</option>
+        <option value="north-western">North-Western</option>
+        <option value="north-central">North-Central</option>
+        <option value="uva">Uva</option>
+        <option value="sabaragamuwa">Sabaragamuwa</option>
+        </select>
+       </div>
+      <br>
+      <div class="by">
+          <option><h1> By Age:</h1></option><br>
+          </div>
+             <div class="overSelect"></div>
+              <div id="checkboxes">
+              <label for="one">
+                <input type="checkbox" id="one" />Puppy</label><br>
+              <label for="two">
+                <input type="checkbox" id="two" />Young</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Adult</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Senior</label>
+              </div>
+              <br>
+     
+    
+    
+        <div class="by">
+         <option> <h1>By Breed: </h1></option>
+         </div>
+         <br>
+         <div class="breed">
+          <label for="breed">Choose your favourite breed</label><br><br>
+         <select name="breed" id="breed">
+          <option value="australian shephard">Australian Shephard</option>
+          <option value="american cocker spaniel">American Cocker Spaniel</option>
+          <option value="alaskan malamute">Alaskan Malamute</option>
+          <option value="anatolian shephard">Anatolian Shephard</option>
+          <option value="american eskimo">American Eskimo</option>
+          <option value="australian terrier">Australian Terrier</option>
+          <option value="american foxhound">American Foxhound</option>
+          <option value="bulldog">Bulldog</option>
+          <option value="beagle">Beagle</option>
+          <option value="boxer">Boxer</option>
+          <option value="boston terrier">Boston Terrier</option>
+          <option value="bernese mountain">Bernese Mountain</option>
+          <option value="border collie">Border Collie</option>
+          <option value="belgian malinois">Belgian Malnois</option>
+          <option value="bichon frise">Bichon Frise</option>
+          <option value="bullmastiff">Bullmastiff</option>
+          <option value="belgian sheepdog">Belgian Sheepdog</option>
+          <option value="barbet">Barbet</option>
+          <option value="briard">Briard</option>
+          <option value="collie">Collie</option>
+          <option value="chinese crested">Chinese Crested</option>
+          <option value="chow chow">Chow Chow</option>
+          <option value="dachshund">Dachshund</option>
+          <option value="english springer spaniel">English Springer Spaniel</option>
+          <option value="english toy spaniel">English Toy Spaniel</option>
+          <option value="finnish lapphund">Finnish Lapphund</option>
+          <option value="german shephard">German Shephard</option>
+          <option value="golden retriever">Golden retriever</option>
+          <option value="german pinscher">German Pinscher</option>
+          <option value="harrier">Harrier</option>
+          <option value="irish setter">Irish Setter</option>
+          <option value="irish terrier">Irish Terrier</option>
+          <option value="jack russel terrier">Jack Russel Terrier</option>
+          <option value="keeshond">Keeshond</option>
+          <option value="komondor">Komondor</option>
+          <option value="labrodor retriever">Labrodor Retriever</option>
+          <option value="leonberger">Leonberger</option>
+          <option value="Mastiff">Mastiff</option>
+          <option value="newfoundland">Newfoundland</option>
+          <option value="old english sheepdog">Old English Sheepdog</option>
+          <option value="pomeranian">Pomeranian</option>
+          <option value="pug">Pug</option>
+          <option value="papillion">Papillion</option>
+          <option value="pointer">Pointer</option>
+          <option value="polish lowland sheepdog">Polish Lowland Sheepdog</option>
+          <option value="rottweiler">Rottweiler</option>
+          <option value="rhodesian ridgeback">Rhodesian Ridgeback</option>
+          <option value="siberian husky">Siberian Husky</option>
+          <option value="shetland sheepdog">Shetland Sheepdog</option>
+          <option value="shiba inu">Shiba Inu</option>
+          <option value="samoyed">Samoyed</option>
+          <option value="silky terrier">Silky Terrier</option>
+          <option value="saluki">Saluki</option>
+          <option value="succex spaniel">Succex Spaniel</option>
+          <option value="skye terrier">Skye Terrier</option>
+          <option value="tibetan terrier">Tibetan Terrier</option>
+          <option value="tibetan mastiff">Tibetan Mastiff</option>
+          <option value="vizsla">Vizsla</option>
+          <option value="wire fox terrier">Wire Fox Terrier</option>
+          <option value="welsh springer spaniel">Welsh Springer Spaniel</option>
+          <option value="xoloitzcuintli">Xoloitzcuintil</option>
+          <option value="yokshire terrier">Yokshire Terrier</option>
+          </select><br><br>
+        
+        <button type="submit" class="searchbtn" name="action" value="search"  style="float: left;">Search</button>
+        <button type="submit"  class="resetbtn" name="action" value="reset"  >Reset</button>
+        </div>
+        
+      </fieldset>
+      </form>
+    
+    
+
+</div>
+</div>
+
+<div id="News" class="tabcontent">
+  <div class="first">
+    <form action="/action_page.php" >
+     <fieldset style='width:720px; height:450px;  background-image: url("Cat1.jpg"); '>
+     <div class="by">
+      <option> <h1>By Districts/ Province: </h1></option>
+      </div>
+      <br>
+      <div class="district">
+       <label for="district">District</label><br><br>
+      <select name="district" id="district">
+        <option value="ampara">Ampara</option>
+        <option value="anuradhapura">Anuradhapura</option>
+        <option value="badulla">Badulla</option>
+        <option value="batticaloa">Batticaloa</option>
+        <option value="colombo">Colombo</option>
+        <option value="galle">Galle</option>
+        <option value="gampaha">Gampaha</option>
+        <option value="hambantota">Hambantota</option>
+        <option value="jaffna">Jaffna</option>
+        <option value="Kaluthara">Kaluthara</option>
+        <option value="kandy">Kandy</option>
+        <option value="kegalle">Kegalle</option>
+        <option value="killinochchi">Killinochchi</option>
+        <option value="kurunegala">Kurunegala</option>
+        <option value="mannar">Mannar</option>
+        <option value="matale">Matale</option>
+        <option value="matara">Matara</option>
+        <option value="monaragala">Monaragala</option>
+        <option value="mullaitivu">Mullaitivu</option>
+        <option value="nuwara eliya">Nuwara Eliya</option>
+        <option value="polonnaruwa">Plonnaruwa</option>
+        <option value="puttalam">Puttalam</option>
+        <option value="rathnapura">Rathnapura</option>
+        <option value="trincomalee">Trincomalee</option>
+        <option value="vavuniya">Vavuniya</option>
+       </select><br>
+     </div>
+     
+       <div class="province">
+        <label for="province">Province</label><br><br>
+      <select name="province" id="province">
+        <option value="central">Central</option>
+        <option value="eastern">Eastern</option>
+        <option value="northern">Northern</option>
+        <option value="southern">Southern</option>
+        <option value="western">Western</option>
+        <option value="north-western">North-Western</option>
+        <option value="north-central">North-Central</option>
+        <option value="uva">Uva</option>
+        <option value="sabaragamuwa">Sabaragamuwa</option>
+        </select>
+       </div>
+      <br>
+      <div class="by">
+          <option><h1> By Age:</h1></option><br>
+          </div>
+             <div class="overSelect"></div>
+              <div id="checkboxes">
+              <label for="one">
+                <input type="checkbox" id="one" />Kitten</label><br>
+              <label for="two">
+                <input type="checkbox" id="two" />Young</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Adult</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Senior</label>
+              </div>
+              <br>
+     
+    
+    
+        <div class="by">
+         <option> <h1>By Breed: </h1></option>
+         </div>
+         <br>
+         <div class="breed">
+          <label for="breed">Choose your favourite breed</label><br><br>
+         <select name="breed" id="breed">
+          <option value="american shorthair">American shorthair</option>
+          <option value="abyssinian">Abyssinian</option>
+          <option value="aegean">Aegean</option>
+          <option value="australian mist">Australian Mist</option>
+          <option value="american polydactyl">American Plydactyl</option>
+          <option value="asian cat">Asian Cat</option>
+          <option value="asian semi-longhair">Asian Semi-longhair</option>
+          <option value="british shorthair">British Shorthair</option>
+          <option value="bengal">Bengal</option>
+          <option value="burmese">Burmese</option>
+          <option value="birman">Birman</option>
+          <option value="bombay">Bombay</option>
+          <option value="burmilla">Burmilla</option>
+          <option value="bambina">Bambina</option>
+          <option value="cymric">Cymric</option>
+          <option value="chausie">Chausie</option>
+          <option value="cheetoh">Cheetoh</option>
+          <option value="devon rex">Devon Rex</option>
+          <option value="exotic shorthair">Exotic Shorthair</option>
+          <option value="europian burmese">Europian Burmese</option>
+          <option value="himalayan">Himalayan</option>
+          <option value="japanese bobtail">Japanese Bobtail</option>
+          <option value="khao manee">Khao Manee</option>
+          <option value="lykoi">Lykoi</option>
+          <option value="maine coon">Maine Coon</option>
+          <option value="manx">Manx</option>
+          <option value="napolean cat">Napolean Cat</option>
+          <option value="ocicat">ocicat</option>
+          <option value="persia">Persia</option>
+          <option value="ragdoll">Ragdoll</option>
+          <option value="Ragamuffin">Ragamuffin</option>
+          <option value="scottish fold">Scottish Fold</option>
+          <option value="Siberian">Siberian</option>
+          <option value="selkirk rex">Selkirk Rex</option>
+          <option value="Somali">Somali</option>
+          <option value="singapura">Singapura</option>
+          <option value="snowshoe">Snowshoe</option>
+          <option value="turkish angora">Turkish Angora</option>
+          <option value="york chocolate">York Chocolate</option>
+          </select><br><br>
+        
+        <button type="submit" class="searchbtn" name="action" value="search"  style="float: left;">Search</button>
+        <button type="submit"  class="resetbtn" name="action" value="reset"  >Reset</button>
+        </div>
+        
+      </fieldset>
+      </form>
+    
+    
+
+</div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <div class="first">
+    <form action="/action_page.php" >
+     <fieldset style='width:720px; height:450px;  background-image: url("Bird6.jpg");'>
+     <div class="by">
+      <option> <h1>By Districts/ Province: </h1></option>
+      </div>
+      <br>
+      <div class="district">
+       <label for="district">District</label><br><br>
+      <select name="district" id="district">
+        <option value="ampara">Ampara</option>
+        <option value="anuradhapura">Anuradhapura</option>
+        <option value="badulla">Badulla</option>
+        <option value="batticaloa">Batticaloa</option>
+        <option value="colombo">Colombo</option>
+        <option value="galle">Galle</option>
+        <option value="gampaha">Gampaha</option>
+        <option value="hambantota">Hambantota</option>
+        <option value="jaffna">Jaffna</option>
+        <option value="Kaluthara">Kaluthara</option>
+        <option value="kandy">Kandy</option>
+        <option value="kegalle">Kegalle</option>
+        <option value="killinochchi">Killinochchi</option>
+        <option value="kurunegala">Kurunegala</option>
+        <option value="mannar">Mannar</option>
+        <option value="matale">Matale</option>
+        <option value="matara">Matara</option>
+        <option value="monaragala">Monaragala</option>
+        <option value="mullaitivu">Mullaitivu</option>
+        <option value="nuwara eliya">Nuwara Eliya</option>
+        <option value="polonnaruwa">Plonnaruwa</option>
+        <option value="puttalam">Puttalam</option>
+        <option value="rathnapura">Rathnapura</option>
+        <option value="trincomalee">Trincomalee</option>
+        <option value="vavuniya">Vavuniya</option>
+       </select><br>
+     </div>
+     
+       <div class="province">
+        <label for="province">Province</label><br><br>
+      <select name="province" id="province">
+        <option value="central">Central</option>
+        <option value="eastern">Eastern</option>
+        <option value="northern">Northern</option>
+        <option value="southern">Southern</option>
+        <option value="western">Western</option>
+        <option value="north-western">North-Western</option>
+        <option value="north-central">North-Central</option>
+        <option value="uva">Uva</option>
+        <option value="sabaragamuwa">Sabaragamuwa</option>
+        </select>
+       </div>
+      <br>
+      <div class="by">
+          <option><h1> By Age:</h1></option><br>
+          </div>
+             <div class="overSelect"></div>
+              <div id="checkboxes">
+              <label for="one">
+                <input type="checkbox" id="one" />Egg</label><br>
+              <label for="two">
+                <input type="checkbox" id="two" />Young</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Adult</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Senior</label>
+              </div>
+              <br>
+     
+    
+    
+        <div class="by">
+         <option> <h1>By Breed: </h1></option>
+         </div>
+         <br>
+         <div class="breed">
+          <label for="breed">Choose your favourite breed</label><br><br>
+         <select name="breed" id="breed">
+           <option value="budgerigar">Budgerigar</option>
+           <option value="cockatoo">Cockatoo</option>
+           <option value="house finch">House Finch</option>
+           <option value="lorikeet">Lorikeet</option>
+           <option value="macaw">Macaw</option>
+           <option value="parrot">Parrot</option>
+           <option value="pigeon">Pigeon</option>
+           </select><br><br>
+        
+        <button type="submit" class="searchbtn" name="action" value="search"  style="float: left;">Search</button>
+        <button type="submit"  class="resetbtn" name="action" value="reset"  >Reset</button>
+        </div>
+        
+      </fieldset>
+      </form>
+    
+    
+
+</div>
+</div>
+
+<div id="About" class="tabcontent">
+  <p><div class="first">
+    <form action="/action_page.php" >
+     <fieldset style='width:720px; height:450px;  background-image: url("Rabbit6.jpg");'>
+     <div class="by">
+      <option> <h1>By Districts/ Province: </h1></option>
+      </div>
+      <br>
+      <div class="district">
+       <label for="district">District</label><br><br>
+      <select name="district" id="district">
+        <option value="ampara">Ampara</option>
+        <option value="anuradhapura">Anuradhapura</option>
+        <option value="badulla">Badulla</option>
+        <option value="batticaloa">Batticaloa</option>
+        <option value="colombo">Colombo</option>
+        <option value="galle">Galle</option>
+        <option value="gampaha">Gampaha</option>
+        <option value="hambantota">Hambantota</option>
+        <option value="jaffna">Jaffna</option>
+        <option value="Kaluthara">Kaluthara</option>
+        <option value="kandy">Kandy</option>
+        <option value="kegalle">Kegalle</option>
+        <option value="killinochchi">Killinochchi</option>
+        <option value="kurunegala">Kurunegala</option>
+        <option value="mannar">Mannar</option>
+        <option value="matale">Matale</option>
+        <option value="matara">Matara</option>
+        <option value="monaragala">Monaragala</option>
+        <option value="mullaitivu">Mullaitivu</option>
+        <option value="nuwara eliya">Nuwara Eliya</option>
+        <option value="polonnaruwa">Plonnaruwa</option>
+        <option value="puttalam">Puttalam</option>
+        <option value="rathnapura">Rathnapura</option>
+        <option value="trincomalee">Trincomalee</option>
+        <option value="vavuniya">Vavuniya</option>
+       </select><br>
+     </div>
+     
+       <div class="province">
+        <label for="province">Province</label><br><br>
+      <select name="province" id="province">
+        <option value="central">Central</option>
+        <option value="eastern">Eastern</option>
+        <option value="northern">Northern</option>
+        <option value="southern">Southern</option>
+        <option value="western">Western</option>
+        <option value="north-western">North-Western</option>
+        <option value="north-central">North-Central</option>
+        <option value="uva">Uva</option>
+        <option value="sabaragamuwa">Sabaragamuwa</option>
+        </select>
+       </div>
+      <br>
+      <div class="by">
+          <option><h1> By Age:</h1></option><br>
+          </div>
+             <div class="overSelect"></div>
+              <div id="checkboxes">
+              <label for="one">
+                <input type="checkbox" id="one" />Baby</label><br>
+              <label for="two">
+                <input type="checkbox" id="two" />Young</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Adult</label><br>
+              <label for="three">
+                <input type="checkbox" id="three" />Senior</label>
+              </div>
+              <br>
+     
+    
+    
+        <div class="by">
+         <option> <h1>By Name: </h1></option>
+         </div>
+         <br>
+         <div class="breed">
+          <label for="breed">Choose your favourite pet</label><br><br>
+         <select name="breed" id="breed">
+           <option value="fish">Fish</option>
+           <option value="frog">Frog</option>
+           <option value="lizard">Lizard</option>
+           <option value="pig">Pig</option>
+           <option value="rabbit">Rabbit</option>
+           <option value="turtle">Turtle</option>
+           </select><br><br>
+        
+        <button type="submit" class="searchbtn" name="action" value="search"  style="float: left;">Search</button>
+        <button type="submit"  class="resetbtn" name="action" value="reset"  >Reset</button>
+        </div>
+        
+      </fieldset>
+      </form>
+    </div>
+</div>
+
+
+<script>
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</div>
+</body>
+</html> 
