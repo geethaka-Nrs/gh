@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!--fontawesome-->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+    <!--This is used for search icon. Instead putting icon manually it is loaded from fontawesome-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <title>Pet Adoption</title>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
+
+        <a class="navbar-brand"><img src="logo.png" height="50px"></a>
+
+        <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="nav">
+
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">HOME</a>
+
+                </li>
+
+                <li class="nav-item dropdown" data-toggle="dropdown">
+
+                    <a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="#">Find Pets</a>
+
+                    <div class="dropdown-menu">
+
+                        <a class="dropdown-item" href="#">Dog</a>
+
+                        <a class="dropdown-item" href="#">Cat</a>
+
+                        <a class="dropdown-item" href="#">Bird</a>
+
+                        <a class="dropdown-item" href="#">Other</a>
+
+                    </div>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">Get Involved</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">Adoption Info</a>
+
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link text-light font-weight-bold px-3" href="#">Pet care & Health</a>
+
+                </li>
+
+            </ul>
+            <br><br>
+            <button type="button" class="btn btn-outline-primary">Sign In</button>
+            <button type="button" class="btn btn-outline-primary">Log In</button>
+            <!-- Search bar -->
+
+
+            <!-- <form class="form-inline ml-3">
+
+                <div class="input-group">
+
+                    <input type="text" class="form-control " placeholder="Search">
+
+                    <button type="submit"><i class="fa fa-search"></i></button>
+
+                </div>
+
+            </form> -->
+
+        </div>
+
+
+    </nav>
+
+    <!-- ======= Header Slider Section ======= -->
+    <header id="header">
+        <div id="headerCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+            <!-- Slide Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#headerCarousel" data-slide-to="1"></li>
+                <li data-target="#headerCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="carousel-background"><img src="255902.jpg" width="1550" alt=""></div>
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>Pets Make Our <span>Lives Better</span></h2>
+                            <p>We focus on providing compassionate care for lost and unwanted dogs, cats and other pets in order to improve their lives in our community because the way to a joyfull life is having a pet.</p>
+                            <a href="#" class="contactus-btn">Adopt Pets</a>
+                            <a href="#" class="contactus-btn">Donate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="carousel-background"><img src="6985083-pug-cookie.jpg" width="1550" alt=""></div>
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>The Way To A Joyfull <span>Life Is Having A Pet</span></h2>
+                            <p>We focus on providing compassionate care for lost and unwanted dogs, cats and other pets in order to improve their lives in our community because the way to a joyfull life is having a pet.</p>
+                            <a href="#" class="contactus-btn">Adopt Pets</a>
+                            <a href="#" class="contactus-btn">Donate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="carousel-background"><img src="Three-dogs-cute-pets_3840x2160.jpg" width="1550" alt=""></div>
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>Pets Are <span>Our Happiness.</span></h2>
+                            <p>Animals love us truely more than humans.Their lover remains forever and never hurt us.Spread us love unconditionally without expecting anything back.</p>
+                            <a href="#" class="contactus-btn">Adopt Pets</a>
+                            <a href="#" class="contactus-btn">Donate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel pre and next arrow -->
+            <a class="carousel-control-prev" href="#headerCarousel" role="button" data-slide="prev">
+                <i class="fas fa-arrow-circle-left"></i>
+            </a>
+
+            <a class="carousel-control-next" href="#headerCarousel" role="button" data-slide="next">
+                <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </header>
+    <!-- End header -->
+
+
+
+
+
+    <!-- /.container --
+
+         <!-- cards -->
+
+    <div class="cards">
+        <div class="container-fluid">
+            <br>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
+                <div class="col mb-4">
+                    <div class="card ">
+                        <img src="images\ct.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">American Shorthair</h5>
+                            <p class="card-text">Color : White<br>Age : 1year<br> A domestic species of small carnivorous mammal. A cute Kitty. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images\photo_2021-08-18_23-45-50.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jack russel terrier</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images\photo_2021-08-18_23-46-17.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">labrodor retriever</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images\photo_2021-08-18_23-46-22.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Yokshire terrier</h5>
+                            <p class="card-text">Color : Brown
+                               <br> Age : 5 months
+                               <br>A cute Puppy.<br>Is a domesticated descendant of the wolf
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images\photo_2021-08-18_23-58-36.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images\photo_2021-08-18_23-46-38.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Rottweiler</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images\photo_2021-08-18_23-46-43.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images\photo_2021-08-18_23-46-46.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- vision & mission -->
+    <div class="visionmision">
+        <br>
+        <div class="card vision">
+            <div class="card-body text-center">
+                <div>
+                    <fieldset>
+                        <legend>VISION</legend>
+
+                        <p>
+                            To be the preeminent animal welfare organization in
+                            <br> caring for lost and unwanted
+                            <br> dogs and cats, as well as promoting <br> responsible pet ownership in the community.
+                        </p>
+                    </fieldset>
+
+                </div>
+                <br>
+                <br>
+                <div>
+                    <fieldset>
+                        <legend>MISSION</legend>
+                        <p>
+                            "We focus on providing compassionate <br> care for lost and unwanted dogs,<br> cats and other pets in order to <br> improve their lives in our community.'"<br> The core concepts To advocate for the rights,
+                            <br> value, and well-being of animals.
+                        </p>
+                    </fieldset>
+                </div>
+            </div>
+
+        </div>
+        <br>
+    </div>
+
+
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Matara Branch</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>No:33,Hikkaduwa Rd,Galle</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Branch</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>0763176222</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>0413322555</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>12hr sevice</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Colombo Branch</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>No:77,Temple RD,Colombo 10</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Head Office</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>0776667778</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>0119898762</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>24hr sevice</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Jaffna Branch</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>No:10,Mindun Kachchi,Jaffna</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>Branch</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>0719922772</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i>0483344456</a></li>
+                        <li><a href="#" title="Design and developed by"><i class="fa fa-angle-double-right"></i>10hr sevice</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="https://www.google.com/">The save a Pet organization</a></u> is a Registered SLS/ISO of Colombo, Inc. Sri Lanka [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                    <p class="h6">© All right Reversed |<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Save_Pets</a></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <!-- ./Footer -->
+
+
+</body>
+
+</html>
